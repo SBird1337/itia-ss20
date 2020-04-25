@@ -1,6 +1,7 @@
 \documentclass{report}
 \usepackage{graphicx}
 \usepackage{todonotes}
+\usepackage{hyperref}
 
 \def\thesection{\arabic{section}}
 
@@ -17,16 +18,24 @@
 
 \maketitle
 \tableofcontents
+\pagebreak
 \section{Introduction}
-In this Lab Report we will present the results of our simulation based on the production facility used in the Information Technology in Automation lecture.
-\todo{Some more explanation on what we did}
+In this Lab Report we will present the results of our simulation based on the production facility used in the Information Technology in Automation lecture. The model consists of 6 Stations as described by the course material. The model was implemented in PlantSimulation\footnote{\url{https://www.plant-simulation.de/}} and after an initial version was completed we conducted several experiments to give some insight on how the factory will behave in different (hypothetical) scenarios.
 
-\section{Overview}
-Here is a top level overview of the PlantSimulation model we used to conduct our experiments.
-\todo{Graphical overview of the PlantSim model}
+\section{Implementation Overview}
+The first task was to implement a model, which assumes optimal parameters. Those parameters where determined using plain experimentation s.t. bottlenecks do not occur. For a visual representation of the PlantSimulation model see \ref{fig:overview}.
+\todo{Add the actual overview graphic}
 
 \section{Results}
-\todo{Results of the experiments we conducted}
-\subsection{Some experimental results}
-\subsection{More experimental results}
+In the following section you can find some experimental results we found when simulating different scenarios. The scenarios and outcomes are described briefly, at the end of the document you can find a detailed Resource Statistics Report. 
+\subsection{Assuming optimal parameters}
+The first scenario assumes that we have complete control over the parameters of the simulated factory. While this is not the case it gives us some good baseline data.\todo{description ... resource statistics}
+\subsection{Assuming realistic parameters}
+This scenario assumes an already existing real-world implementation in form of the video included in the course material. While this is not typically possible in the planning phase of a project, it gives some insight on what can really cause bottlenecks in a real-world implementation. \todo{description ... resource statistics}
+\subsection{Assuming small buffer}
+The purpose of station 5 is to act as a buffer. This scenario assumes that this buffer is very small and can only take one piece at a time, otherwise it assumes optimal parameters.\todo{description ... resources statsitics}
+\subsection{Assuming more performant drill station}
+With additional financial power we can enhance the production process and make drilling twice as fast. (Eighter by using better material and machinery, or by parallelizing the process) This model uses realistic parameters, but the Drill and DrillCheck modules operate twice as fast.\todo{description ... resource statistics}
+\section{Attachments}
+
 \end{document}
