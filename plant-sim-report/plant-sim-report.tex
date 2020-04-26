@@ -30,7 +30,7 @@ The first task was to implement a model, which assumes optimal parameters. Those
 	\caption{Top-Level overview of the PlantSimulation Model}
 	\label{fig:overview}
 \end{figure}
-A few Notes on the details of this simulation: The drilling module in the real-world is some sort of turntable, which PlantSimulation knows as well, but our slot has 4 slots, while we could not model that in PlantSimulation. 
+A few Notes on the details of this simulation: The drilling module in the real-world is some sort of turntable, which PlantSimulation knows as well, but our slot has 4 slots, while we could not model that in PlantSimulation. Station 2 is able to detect parts that are too thick, and has a way to get rid of them via a slide. While this behavior is implied with the "MeasureThickness" we think that the particular behavior of the real-world factory (where thick parts need to be moved down again via the lift) is a huge potential bottleneck.
 \section{Results}
 In the following section you can find some experimental results we found when simulating different scenarios. The scenarios and outcomes are described briefly, at the end of the document you can find a detailed Resource Statistics Report. 
 \subsection{Assuming optimal parameters}
